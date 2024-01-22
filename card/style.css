@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    margin-left: 50px;
+
+
+}
+
+.cards{
+    position: relative;
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    /* border: 2px solid navy; */
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40px;
+    transition: 0.9s ease;
+
+
+}
+
+.cards:hover {
+    top: -15px;
+    background: rgba(0 , 0, 0, 0.5);
+}
+
+.picture{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture img {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+.name{
+    visibility: hidden;
+    position: absolute;
+    margin-top: 80px;
+    transition: .2s ease all;
+
+
+}
+
+.name h1{
+    color: aliceblue;
+    text-transform: uppercase;
+    pointer-events: none;
+
+}
+
+.name p{
+    color: aliceblue;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    pointer-events: none;
+
+}
+
+.name a{
+    color: aliceblue;
+    text-decoration: none;
+    border: 1px solid ;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+
+.cards:hover > .name{
+    visibility: visible;
+}
+
+.cards:hover > .picture img{
+    opacity: 0.5;
+}
+
+
