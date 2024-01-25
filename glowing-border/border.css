@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2f2f2f;
+}
+
+.square{
+    height: 300px;
+    width: 300px;
+    background: #2f2f2f;
+    border-radius: 20px;
+    margin-left: 20px;
+
+}
+
+.circle{
+    height: 300px;
+    width: 300px;
+    background: #2f2f2f;
+    border-radius: 200px;
+    margin-left: 20px;
+}
+
+.border{
+    position: relative;
+    background: repeating-conic-gradient(from var(--a), pink 0%, pink 5%, transparent 5%, transparent 40%, pink 50%);
+    animation: rotate 4s linear infinite;
+}
+
+@property --a{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes rotate {
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a: 360deg;
+    }
+    
+}
+
+.border::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: repeating-conic-gradient(from var(--a), blue 0%, blue 5%, transparent 5%, transparent 40%, blue 50%);
+    animation: rotate 4s linear infinite;
+    animation-delay: -1s;
+}
+
+.border::after{
+    content: '';
+    position: absolute;
+    background: rgb(70, 63, 63);
+    inset: 8px;
+    border: 8px solid #2f2f2f;
+}
+
+.square::before{
+    border-radius: 15px;
+}
+
+.square::after{
+    border-radius: 15px;
+}
+
+.circle::before{
+    border-radius: 200px;
+}
+
+.circle::after{
+    border-radius: 300px;
+}
