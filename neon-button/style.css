@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: black;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    color: aqua;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-right: 70px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    padding: 25px 30px;
+    border-radius: 10px;
+    transition: .5s ease;
+    overflow: hidden;
+
+}
+
+a:hover{
+    background: aqua;
+    color: black;
+    box-shadow: 0 0 5px aqua,
+                0 0 25px aqua,
+                0 0 50px aqua,
+                0 0 200px aqua;
+    border-radius: 20px;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, #0054);
+}
+
+a:first-child{
+    filter: hue-rotate(225deg);
+}
+a:last-child{
+    filter: hue-rotate(300deg);
+}
+
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, aqua);
+    animation: animate1 1s infinite;
+
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+        
+    }
+    100%{
+        left: 100%;
+
+    }
+}
+a span:nth-child(2){
+    /* position: absolute; */
+    right: 0;
+    top: -100%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, aqua);
+    animation: animate2 1s infinite;
+    animation-delay: 0.25s;
+
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+        
+    }
+    100%{
+        top: 100%;
+
+    }
+}
+a span:nth-child(3){
+    right: 100;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(270deg, transparent, aqua);
+    animation: animate3 1s infinite;
+    animation-delay: 0.5s;
+
+}
+
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+a span:nth-child(4){
+    left: 0;
+    top: 100;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, aqua);
+    animation: animate4 1s infinite;
+    animation-delay: 0.75s;
+
+}
+
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    100%{
+        bottom: 100%;
+    }
+}

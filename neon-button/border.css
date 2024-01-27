@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+
+}
+
+.box a{
+    position: relative;
+    font-size: 1.2em;
+    padding: 25px;
+    color: blue;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 4px;
+    overflow: hidden;
+}
+.box a:hover{
+    background: blue;
+    color: black;
+    box-shadow: 0 0 5px blue,
+                0 0 25px blue,
+                0 0 50px blue,
+                0 0 200px blue;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #00e1);
+}
+.box a span{
+    position: absolute;
+    display: block;
+}
+.box a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, blue);
+    animation: animate1 1s infinite;
+}
+
+@keyframes animate1 {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 100%;
+    }
+    
+}
+
+.box a span:nth-child(2){
+    right: 0;
+    top: -100%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, blue);
+    animation: animate2 1s infinite;
+    animation-delay: 0.25ms;
+}
+
+@keyframes animate2 {
+    0%{
+        top: -100%;
+    }
+    100%{
+        top: 100%;
+    }
+    
+}
+
+.box a span:nth-child(3){
+    bottom: 0;
+    top: 100;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(180deg, transparent, blue);
+    animation: animate3 1s infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 100%;
+    }
+    
+}
+
+.box a span:nth-child(4){
+    left: 0;
+    top: 100;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, blue);
+    animation: animate4 1s infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0%{
+        bottom: -100%;
+    }
+    100%{
+        bottom: 100%;
+    }
+    
+}
+
