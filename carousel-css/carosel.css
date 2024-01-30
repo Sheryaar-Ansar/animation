@@ -12,6 +12,7 @@ body{
     position: relative;
     max-width: 48rem;
     margin: 0 auto;
+
 }
 
 .slider{
@@ -20,9 +21,26 @@ body{
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
+
+@keyframes slide {
+    0%{transform: translateX(0%);}
+    10%{transform: translateX(-100%);}
+    20%{transform: translateX(-100%);}
+    30%{transform: translateX(-100%);}
+    40%{transform: translateX(-200%);}
+    50%{transform: translateX(-200%);}
+    60%{transform: translateX(-300%);}
+    70%{transform: translateX(-300%);}
+    80%{transform: translateX(-300%);}
+    90%{transform: translateX(0%);}
+    100%{transform: translateX(0%);}
+    
+}
 .slider img{
     object-fit: cover;
     flex: 1 0 100%;
+    animation: slide 30s ease-in-out infinite alternate;
+
 }
 
 .slider-nav{
