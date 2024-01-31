@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: grey;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    background: cadetblue;
+}
+
+nav label.logo{
+    font-size: 30px;
+    color: aliceblue;
+    font-weight: 600;
+    letter-spacing: 1.9px;
+    text-transform: uppercase;
+    line-height: 80px;
+    margin-left: 50px;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 19px;
+    font-weight: 500;
+    padding: 7px 15px;
+    border-radius: 8px;
+}   
+a.active, a:hover{
+    background: rgb(67, 137, 139);
+}
+
+nav ul li button{
+    background: cadetblue;
+    font-size: 19px;
+    color: aliceblue;
+    font-weight: 500;
+    border: 2px solid ;
+    padding: 7px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+nav ul li button:hover{
+    background: rgb(56, 135, 138);
+    transition: .3s ease;
+    
+}
+
+#check{
+    display: none;
+}
+
+.btn{
+    font-size: 40px;
+    line-height: 92px;
+    float: right;
+    margin-right: 20px;
+    color: aliceblue;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 952px) {
+    nav label.logo{
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    nav ul li a, nav ul li button{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 858px){
+    .btn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        background: rgba(81, 145, 170, 0.425);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        top: 80px;
+        left: -100%;
+        transition: all 0.5s ease;
+    }
+    nav ul li{
+        display: block;
+
+    }
+    nav ul li a, nav ul li button{
+        font-size: 19px
+    }
+    nav ul li a:hover, nav ul li a.active{
+        background: none;
+        color: rgb(56, 135, 138);
+        text-shadow: 0 0 2px rgb(69, 224, 211);
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
