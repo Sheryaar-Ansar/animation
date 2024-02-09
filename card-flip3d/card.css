@@ -110,8 +110,8 @@ section{
 }
 .info{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    /* align-items: center; */
     width: 80%;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -120,6 +120,7 @@ section{
 .line{
     width: 2px;
     background: aliceblue;
+    color: aliceblue;
 }
 
 .icons{
