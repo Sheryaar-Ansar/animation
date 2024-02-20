@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /* margin-bottom: 40px; */
+    background: rgb(178, 216, 241);
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    margin-top: 100px;
+
+}
+
+.parent div {
+    width: 200px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 7px;
+
+}
+
+.button{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+}
+.btn{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.button .button-square1{
+    position: relative;
+    width: 150px;
+    height: 60px;
+    background: repeating-conic-gradient(from var(--a), blue 0%, blue 5%, transparent 5%, transparent 40%, blue 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate 4s linear infinite;
+    border-radius: 15px;
+
+}
+.button .button-square1::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: repeating-conic-gradient(from var(--a), cyan 0%, cyan 5%, transparent 5%, transparent 40%, cyan 50%);
+    animation: rotate 4s linear infinite;
+    animation-delay: 1s;
+    border-radius: 15px;
+
+
+}
+.button .button-square1::after{
+    content: '';
+    position: absolute;
+    background: rgb(102, 129, 129);
+    inset: 3px;
+    border-radius: 15px;
+    border: 3px solid rgb(178, 216, 241);
+
+
+}
+.button .button-square2{
+    position: relative;
+    width: 150px;
+    height: 60px;
+    background: repeating-conic-gradient(from var(--a), blue 0%, blue 5%, transparent 5%, transparent 40%, blue 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate 4s linear infinite;
+    border-radius: 15px;
+
+}
+.button .button-square2::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: repeating-conic-gradient(from var(--a), cyan 0%, cyan 5%, transparent 5%, transparent 40%, cyan 50%);
+    animation: rotate 4s linear infinite;
+    animation-delay: 1s;
+    border-radius: 15px;
+
+
+}
+.button .button-square2::after{
+    content: '';
+    position: absolute;
+    background: rgb(102, 129, 129);
+    inset: 3px;
+    border-radius: 15px;
+    border: 3px solid rgb(178, 216, 241);
+
+
+}
+.button .button-square3{
+    position: relative;
+    width: 150px;
+    height: 60px;
+    background: repeating-conic-gradient(from var(--a), blue 0%, blue 5%, transparent 5%, transparent 40%, blue 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotate 4s linear infinite;
+    border-radius: 15px;
+
+
+
+}
+.button .button-square3::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: repeating-conic-gradient(from var(--a), cyan 0%, cyan 5%, transparent 5%, transparent 40%, cyan 50%);
+    animation: rotate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 15px;
+
+
+
+}
+.button .button-square3::after{
+    content: '';
+    position: absolute;
+    background: rgb(102, 129, 129);
+    inset: 3px;
+    border-radius: 15px;
+    border: 3px solid rgb(178, 216, 241);
+}
+
+@property --a{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes rotate {
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a:360deg;
+    }
+}
+
+.button button{
+    position: relative;
+    z-index: 1;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: aliceblue;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px; 
+}
+
+.btn:hover{
+    box-shadow: 0 0 5px;
+}
+
