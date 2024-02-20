@@ -7,11 +7,12 @@
 
 .container{
     min-height: 100vh;
-    width: 100%;
+    width: auto;
     background: linear-gradient(34deg, pink, rgb(143, 100, 107), rgb(218, 100, 120));
     display: flex;
     align-items: center;
     justify-content: center;
+    height: auto;
 }
 
 .calculator{
@@ -19,7 +20,8 @@
     padding: 25px;
     border-radius: 20px;
     border: 4px solid rgb(224, 189, 124);
-    backdrop-filter: blur(0px);
+    width: 320px;
+    height: auto;
 }
 
 .calculator form input{
@@ -43,7 +45,7 @@
 
 .calculator form .display input{
     border-radius: 10px;
-    width: 250px;
+    width: 100%;
     text-align: right;
     margin-left: 3px;
     cursor: text;
@@ -62,4 +64,18 @@
 
 .calculator form div .char:hover{
     background: rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width:318px){
+    .calculator{
+        width: 200px;
+    }
+    .calculator form input{
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .calculator form .display input{
+        width: 130px;
+    }
 }
