@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rates Conversion Using HTML, CSS & JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Rates Conversion</h2>
+        <form>
+            <p>Enter Your Amount:</p>
+            <input type="number" placeholder="0.00">
+            <div class="select-wrapper">
+                <div class="select-container">
+                    <p>From</p>
+                    <select>
+                        <option value="PKR">PKR</option>
+                        <option value="US">US</option>
+                    </select>
+                </div>
+                <ion-icon name="repeat-outline"></ion-icon>
+                <div class="select-container">
+                    <p>To</p>
+                    <select>
+                        <option value="PKR">PKR</option>
+                        <option value="US" selected>US</option>
+                    </select>
+                </div>
+            </div>
+            <div class="msg">
+                1 US = 286 PKR
+            </div>
+            <div class="btn">
+                <button>Calculate The Rates</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
