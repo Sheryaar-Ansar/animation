@@ -56,12 +56,29 @@ form input::placeholder{
 ion-icon{
     font-size: 1.9em;
 }
+.select-div{
+    display: flex;
+    width: 100%;
+    border: 3px solid rgb(160, 151, 151);
+    border-radius: 12px;
+    /* background: rgb(160, 151, 151); */
+
+}
+.select-div img{
+    width: 30px;
+    cursor: pointer;
+    
+}
 select{
-    background: rgb(160, 151, 151);
+    background: transparent;
     cursor: pointer;
     outline: none;
     padding: 5px;
     border-radius: 5px;
+    border: none;
+}
+select option{
+    background: rgb(160, 151, 151);
 }
 .msg{
     margin-top: 20px;
