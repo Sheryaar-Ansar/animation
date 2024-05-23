@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background: rgb(59, 59, 59);
+    width: 100%;
+
+}
+.card{
+    width: 90%;
+    max-width: 747px;
+    background: linear-gradient(40deg, maroon, cyan, purple);
+    margin: 40px 35px;
+    padding: 40px 0;
+    border-radius: 50px;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.search input{
+    height: 40px;
+    border-radius: 20px;
+    width: 50%;
+    border: 3px solid rgb(59, 59, 59);
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.search button{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 3px solid rgb(59, 59, 59);
+    background: linear-gradient(20deg, rgb(31, 31, 31), cyan);
+    cursor: pointer;
+    transition: 1s linear;
+
+}
+.search button:hover{
+    background: rgba(0, 0, 0, 0.5);
+    transition: 1s linear;
+}
+.search button img{
+    height: 20px;
+}
+.error{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 600;
+    color: aliceblue;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.para{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+}
+.para h1{
+    font-size: 40px;
+}
+.parameters{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    color: aliceblue;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 60px;
+}
+.humidity, .wind{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.humidity img, .wind img{
+    width: 50px;
+}
+.parameters:nth-child(2){
+    width: px;
+    height: 100%;
+    color: black;
+    background: black;
+}
+.error{
+    display: none;
+}
+.weather{
+    display: none;
+}
